@@ -1,19 +1,30 @@
 const gulp = require("gulp");
-const sass = require("gulp-sass")(require("sass")); // Compila Sass para CSS
-const cleanCSS = require("gulp-clean-css"); // Minifica o CSS final
+const sass = require("gulp-sass")(require("sass"));
+const imagemin = require("gulp-imagemin");
 
-// Tarefa para processar o Sass
-function compileSass() {
+function comprimeImagens() {
   return gulp
-    .src("./src/styles/**/*.scss") // Local dos arquivos .scss
-    .pipe(sass().on("error", sass.logError)) // Transpila para CSS
-    .pipe(cleanCSS()) // Minifica o arquivo gerado
-    .pipe(gulp.dest("./dist/css")); // Pasta de destino
+    .src("./src/images/**/*")
+    .pipe(imagemin())
+    .pipe(gulp.dest("./dist/images"));
 }
 
-// Exporta a tarefa
-exports.default = compileSass;
+function compileSass() {
+  return gulp
+    .src("./src/styles/**/*.scss") 
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(gulp.dest("./dist/css"));
+}
 
-exports.watch = function () {
-  gulp.watch("./src/styles/*.scss", gulp.parallel(compileSass));
-};
+// Exporta as tarefas individuais
+exports.images = comprimeImagens;
+exports.sass = compileSass;
+
+// Tarefa padrão: Roda tudo e depois fica vigiando
+exports.default = gulp.series(
+  gulp.parallel(compileSass, comprimeImagens),
+  function () {
+    gulp.watch("./src/styles/**/*.scss", compileSass);
+    gulp.watch("./src/images/**/*", comprimeImagens);
+  },
+);
