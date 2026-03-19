@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundario: #f9f9f9;
+
+body {
+    background-color: $corDeFundo;
+}
+
+@mixin Text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+@mixin Title($fontSize: 40px) {
+    @include Text($fontSize);
+    color: $corTextoSecundario;
+}
+
+.text {
+    @include Text;
+}
+
+.link-text {
+    @include Text(18px);
+    color: $corTextoSecundario;
+    text-decoration: underline;
+}
+
+.text--small {
+    @include Text(12px);
+}
+
+.text--big {
+    @include Text(18px);
+}
+
+.title {
+    @include Title;
+}
+
+.title--small {
+    @include Title(28px);
+}
+
+.title--big {
+    @include Title(44px);
+}

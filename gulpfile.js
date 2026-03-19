@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const imagemin = require("gulp-imagemin");
-
+const cleanCSS = require("gulp-clean-css");
 function comprimeImagens() {
   return gulp
     .src("./src/images/**/*")
@@ -12,15 +12,14 @@ function comprimeImagens() {
 function compileSass() {
   return gulp
     .src("./src/styles/**/*.scss") 
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sass().on("error", sass.logError)) 
+    .pipe(cleanCSS())                       
     .pipe(gulp.dest("./dist/css"));
 }
 
-// Exporta as tarefas individuais
 exports.images = comprimeImagens;
 exports.sass = compileSass;
 
-// Tarefa padrão: Roda tudo e depois fica vigiando
 exports.default = gulp.series(
   gulp.parallel(compileSass, comprimeImagens),
   function () {

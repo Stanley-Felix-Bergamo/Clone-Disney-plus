@@ -4,6 +4,7 @@
   "description": "<img src='' alt=\"Imagem não está disponível\">",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp watch",
     "build": "gulp"
   },
   "keywords": [],
