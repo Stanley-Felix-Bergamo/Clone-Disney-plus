@@ -3,7 +3,7 @@
  <img src='' alt="Imagem não está disponível">
 
  ##  📜 Projeto :
- <p>Projeto front-end desenvolvida durante as Aulas da Ebac</p>
+ <p>Projeto front-end em Html desenvolvida durante as aulas da Ebac</p>
  
 ##  💻 Tecnologias :
 <div style="display: flex;">
