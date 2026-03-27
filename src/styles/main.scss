@@ -44,6 +44,10 @@ body {
 
 .text {
     @include Text;
+
+     @media (max-width: 768px) {
+        @include Text(14px);
+    }
 }
 
 .link-text {
@@ -58,14 +62,26 @@ body {
 
 .text--big {
     @include Text(18px);
+
+    @media (max-width: 768px) {
+        @include Text(15px);
+    }
 }
 
 .title {
     @include Title;
+
+    @media (max-width: 768px) {
+        @include Title(24px);
+    }
 }
 
 .title--small {
     @include Title(28px);
+
+    @media (max-width: 768px) {
+        @include Text(11px);
+    }
 }
 
 .title--big {
@@ -90,7 +106,7 @@ body {
     border: 1px solid variaveis.$corDeFundoBortaoPrimario;
 
     &:hover {
-        background-color: lighten(variaveis.$corDeFundoBortaoPrimario, 3%);
+        background-color:  lighten(variaveis.$corDeFundoBortaoPrimario, 3%);
     }
 
     &--secondary {
@@ -98,7 +114,7 @@ body {
         border-color: variaveis.$corDeFundoBotaoSecundario;
 
         &:hover {
-            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+            background-color:  lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
         }
     }
 
@@ -119,9 +135,8 @@ body {
     align-items: center;
     padding: 2vw 5.6vw;
 
-    @media (max-width: 767px) {
-        grid-template-columns: 1fr;
-        justify-content: center;
+    @media (max-width: 768px) {
+        display: block;
     }
 
     img {
