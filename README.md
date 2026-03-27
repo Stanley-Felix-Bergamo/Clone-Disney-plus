@@ -1,6 +1,6 @@
 ##  Disney plus
 
- <img src='' alt="Imagem não está disponível">
+ <img src='https://raw.githubusercontent.com/Stanley-Felix-Bergamo/Clone-Disney-plus/refs/heads/main/src/images/imagem.png' alt="Imagem não está disponível">
 
  ##  📜 Projeto :
  <p>Projeto front-end em Html desenvolvida durante as aulas da Ebac</p>
