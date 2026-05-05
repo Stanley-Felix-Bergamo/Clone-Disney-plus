@@ -5,6 +5,18 @@
  ##  📜 Projeto :
  <p>Projeto front-end em Html desenvolvida durante as aulas da Ebac</p>
  <br>
+
+##  💻 Tecnologias :
+<div style="display: flex;">
+ <ul>
+   <li>Html</li>
+   <li>Css</li>
+   <li>Scss</li>
+   <li>Javascript</li>
+   <li>Gulp.js</li>
+ </ul>
+</div> 
+ <br>
  
 
  ##  🛠️ Instalação :
@@ -29,16 +41,7 @@ npm run build
 <p>E pronto é só abrir o index.html</p>
  
 
-<br>
+
  
-##  💻 Tecnologias :
-<div style="display: flex;">
- <ul>
-   <li>Html</li>
-   <li>Css</li>
-   <li>Scss</li>
-   <li>Javascript</li>
-   <li>Gulp.js</li>
- </ul>
-</div> 
+
 
