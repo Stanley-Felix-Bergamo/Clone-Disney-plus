@@ -2,6 +2,11 @@
 
  <img src='https://raw.githubusercontent.com/Stanley-Felix-Bergamo/Clone-Disney-plus/refs/heads/main/src/images/imagem.png' alt="Imagem não está disponível">
 
+ ##  📜 Projeto :
+ <p>Projeto front-end em Html desenvolvida durante as aulas da Ebac</p>
+ <br>
+ 
+
  ##  🛠️ Instalação :
  
  <p>Primeiro passo, baixe o projeto na sua máquina usando o terminal.</p>
@@ -23,9 +28,8 @@ npm run build
 
 <p>E pronto é só abrir o index.html</p>
  
- ##  📜 Projeto :
- <p>Projeto front-end em Html desenvolvida durante as aulas da Ebac</p>
 
+<br>
  
 ##  💻 Tecnologias :
 <div style="display: flex;">
