@@ -32,10 +32,10 @@ git clone https://github.com/Stanley-Felix-Bergamo/Clone-Disney-plus.git
 npm install
 ```
 
-<p>Terceiro passo, use este comando no terminal</p>
+<p>Terceiro passo, use o comando npm run build para preparar seu aplicativo para produção.</p>
 
 ```
-npm run build
+npm run build 
 ```
 
 <p>E pronto é só abrir o index.html</p>
